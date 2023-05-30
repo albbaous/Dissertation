@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source_dir="/home/styab21/scratch/prokka_results"
+target_dir="/home/styab21/scratch/prokka_fna_files"
+
+# Create the target directory if it doesn't exist
+mkdir -p "$target_dir"
+
+# Find all FNA files in the subdirectories and move them to the target directory
+find "$source_dir" -type f -name "*.fna" -exec mv -t "$target_dir" {} +
+
+echo "FNA files moved to $target_dir"
