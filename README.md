@@ -1,5 +1,5 @@
-# Dissertation
-A repository for my dissertation code 
+# Dissertation Repo
+A repository containing code for the dissertation titled "" by Alexandra Baousi 
 
 ## Basic Code 
 Run a batch file:    sbatch file.sh 
