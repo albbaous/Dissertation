@@ -68,7 +68,9 @@ disown
 ### Breaking down BUSCO 
 - -i the input file to analyse which is the .fna files in /prokka_fna_files
 
-- -l or --lineage_dataset
+- -l or --lineage_dataset which is gammaproteobacteria_odb10 
+
+!! it is important to have the latest version of BUSCO (v 5.4.7) as earlier ones do not have the gammaproteobacteria dataset !!
 
 - -m or --mode sets the assessment MODE: genome, proteins, transcriptome
 
