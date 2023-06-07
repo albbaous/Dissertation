@@ -55,12 +55,19 @@ disown
 
 -	$file represents the input genome file to be processed by Prokka.
 
-## Running move_fna.sh (for BUSCO analysis) and move_gff.sh (for Roary) 
+## Running and understanding movefna.sh (for BUSCO analysis) and movegff.sh (for Roary) on Tomoko 
 
-- These create new directories which include only the files necessary for BUSCO and Roary analyses. 
+- These create new directories which include only the files necessary for BUSCO and Roary analyses. They have similar features: 
 
-- 
+- mkdir -p ensures that the target directory is created only if it doesn't already exist
 
+- find command searches for all files (-type f) in the $source_dir directory and its subdirectories that have the right extension (-name "*.fna" or "*.gff")
+
+- -exec mv executes the mv command to move files to the $target_dir
+
+- {} placeholder represents the found file
+
+- plus sign (+) symbol at the end of the command ensures that multiple files can be moved in a single invocation of mv
 
 ## Running BUSCO 
 
