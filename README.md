@@ -65,4 +65,7 @@ nohup ./busco_new.sh
 
 disown
 
+### Breaking down BUSCO 
+- 
+
 
