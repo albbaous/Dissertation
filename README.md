@@ -34,6 +34,8 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 ## Running Prokka 
 
+- Download using: mamba install -c bioconda -c conda-forge prokka=1.14.6
+
 - Run on Tomoko using the command: 
 
 nohup ./prokka.sh & 
@@ -52,4 +54,15 @@ disown
 -	--locustag sets the locus tag to the $genome_name, which helps identify the genes in the annotation output.
 
 -	$file represents the input genome file to be processed by Prokka.
+
+## Running BUSCO 
+
+- Download using: mamba install -c bioconda -c conda-forge busco=5.4.7
+
+- Run on Tomoko using the command: 
+
+nohup ./busco_new.sh
+
+disown
+
 
