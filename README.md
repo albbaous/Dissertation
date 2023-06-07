@@ -66,6 +66,14 @@ nohup ./busco_new.sh
 disown
 
 ### Breaking down BUSCO 
-- 
+- -i the input file to analyse which is the .fna files in /prokka_fna_files
+
+- -l or --lineage_dataset
+
+- -m or --mode sets the assessment MODE: genome, proteins, transcriptome
+
+- -o defines the folder that will contain all results, logs, and intermediate data
+
+
 
 
