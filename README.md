@@ -55,6 +55,13 @@ disown
 
 -	$file represents the input genome file to be processed by Prokka.
 
+## Running move_fna.sh (for BUSCO analysis) and move_gff.sh (for Roary) 
+
+- These create new directories which include only the files necessary for BUSCO and Roary analyses. 
+
+- 
+
+
 ## Running BUSCO 
 
 - Download using: mamba install -c bioconda -c conda-forge busco=5.4.7
