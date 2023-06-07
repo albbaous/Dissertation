@@ -90,6 +90,12 @@ disown
 
 - -o defines the folder that will contain all results, logs, and intermediate data
 
+## Running Roary 
 
+- Download using: mamba install -c bioconda conda-forge roary=1.13.0
+
+- Run on Augusta using the command: sbatch roary.sh 
+
+## Breaking down Roary 
 
 
