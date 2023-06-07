@@ -32,4 +32,24 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
   
 - Unzip files in ncbi_dataset/data directory and transfer to remote, using scp command or FileZilla (https://filezilla-project.org)
 
-  
+## Running Prokka 
+
+- Run on Tomoko using the command: 
+
+nohup ./prokka.sh & 
+
+disown
+
+### Breaking down prokka.sh 
+-	--outdir specifies the output directory for Prokka results as $dir/prokka, where $dir is the directory extracted from the file path.
+	
+-	--prefix sets the prefix for Prokka output files to the $genome_name, which represents the name of the current genome.
+	
+-	--force forces Prokka to overwrite existing output files if they already exist.
+	
+-	--addgenes includes additional gene finding during the annotation process.
+	
+-	--locustag sets the locus tag to the $genome_name, which helps identify the genes in the annotation output.
+
+-	$file represents the input genome file to be processed by Prokka.
+
