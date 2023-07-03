@@ -127,7 +127,7 @@ nohup ./busco_new.sh
 
 - Directories A-H were successful in producing roary outputs but I,J,K were not so what was problematic about them?
 
-#### Using prob_directories.sh to combine directory_9, 10 and 11 which contain the files roary failed on: 
+#### Using problem_directories.sh to combine directory_9, 10 and 11 which contain the files roary failed on: 
 
 - This assesses whether there is was an issue with specific files or whether it was the volume of files that troubled roary since I,J,K contained more files than previous directories.
 
