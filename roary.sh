@@ -15,3 +15,4 @@ conda activate /gpfs01/home/styab21/miniconda3/envs/roary3_env
 
 # Run Roary
 roary -f roary_results -e -v --mafft -p 40 -i 30 -s -g 400000 -iv 1.2 *.gff
+
