@@ -100,5 +100,24 @@ nohup ./busco_new.sh
 - Run on Augusta using the command: sbatch roary.sh 
 
 ## Breaking down Roary 
+- -f Specifies the output directory for Roary results
+
+- -e createS a multiFASTA alignment of core genes using PRANK
+
+- -v enables verbose output
+
+- --mafft runs multiple sequence alignment using MAFFT
+
+- -p specifies the number of CPUs to be used (40 in this case)
+
+- -i Sets the minimum percentage identity for BLASTp comparisons (30 in this case)
+
+- -s ensures paralogs are not split
+
+- -g sets maximum number of clusters (400000 in this case)
+
+- -iv sets the MCL inflation value for clustering (1.2 in this case)
+
+- *.gff specifies the input GFF files for Roary.
 
 
