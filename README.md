@@ -93,13 +93,51 @@ nohup ./busco_new.sh
 
 - -o defines the folder that will contain all results, logs, and intermediate data
 
+## Prior to running Roary !!!! Understanding the need to split it up into smaller directories 
+
+- Roary could not exactly handle the 258 genomes (as filted after the BUSCO analysis) 
+
+- It failed on the large dataset after many tries, whilst it worked on smaller subsets of data
+
+- Therefore: 
+  
+#### Divide and Conquer 
+
+- Genomes were split into 11 subdirectories, 10 of which contained 25 genomes and 1 of which had 8. This was done using the script directory.sh
+
+- directory.sh created 11 directories labelled directory_1, directory_2 and so on
+
+#### Next, fibonacci_directories.sh:
+- Copied the contents of directory_1 to a new directory called A.
+
+- Copied the contents of directories_1 and directory_2 to a new directory called B.
+
+- Copied the contents of directories_1,_2, and_3 to a new directory called C.
+
+- Overall, this script creates a series of output directories and populates them with the cumulative contents of the corresponding source directories (created by directory.sh)
+
+- This means that Roary could be run in parallel in each directory (A-H), to spot which files were failing it
+
+- There were a lot of questions raised like "is it the number of files?" or "is it 1 bad file failing it?" or "is it a group of files??"
+
+- This is what splitting them up helped to clarify.
+
+- Directories A-H were successful in producing roary outputs but I,J,K were not so what was problematic about them?
+
+#### Using prob_directories.sh to combine directory_9, 10 and 11 which contain the files roary failed on: 
+- This assesses whether there is was an issue with specific files or whether it was the volume of files that troubled roary since I,J,K contained more files than previous directories.
+
+- Running roary on the resultant directory showed no issues so the files were all fine. 
+
+### Combining directory H with 
+
 ## Running Roary 
 
 - Download using: mamba install -c bioconda conda-forge roary=1.13.0
 
-- Run on Augusta using the command: sbatch roary.sh 
+- Run on Augusta using the command: sbatch roary.sh
 
-## Breaking down Roary 
+### Breaking down Roary 
 - -f Specifies the output directory for Roary results
 
 - -e createS a multiFASTA alignment of core genes using PRANK
