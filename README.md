@@ -36,11 +36,13 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Download using: mamba install -c bioconda -c conda-forge prokka=1.14.6
 
+-  !!! When running bash shell scripts on Tomoko make sure the conda env is activated prior to running them !!!
+
+-  Prior to running this activate Prokka environment !!!! 
+
 - Run on Tomoko using the command: 
 
 nohup ./prokka.sh & 
-
-disown
 
 ### Breaking down prokka.sh 
 -	--outdir specifies the output directory for Prokka results as $dir/prokka, where $dir is the directory extracted from the file path.
@@ -73,11 +75,12 @@ disown
 
 - Download using: mamba install -c bioconda -c conda-forge busco=5.4.7
 
+- Activate BUSCO environment prior to running!! (keep activated during)
+
 - Run on Tomoko using the command: 
 
 nohup ./busco_new.sh
 
-disown
 
 ### Breaking down BUSCO 
 - -i the input file to analyse which is the .fna files in /prokka_fna_files
