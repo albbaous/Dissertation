@@ -191,4 +191,12 @@ nohup ./busco_new.sh &
 
 - *.gff specifies the input GFF files for Roary.
 
+### Creating BUSCO plots 
+
+- Download FastTree (to a conda environment):  ``mamba install -c bioconda fasttree``
+
+- Run this to generate newick tree: ``FastTree -nt -gtr core_gene_alignment.aln > my_tree.newick``
+
+- Then this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
+
 
