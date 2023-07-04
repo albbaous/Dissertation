@@ -191,7 +191,7 @@ nohup ./busco_new.sh &
 
 - *.gff specifies the input GFF files for Roary.
 
-### Creating BUSCO plots 
+### Creating Roary plots 
 
 - Download FastTree (to a conda environment):  ``mamba install -c bioconda fasttree``
 
