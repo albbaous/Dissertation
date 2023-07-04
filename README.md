@@ -114,6 +114,9 @@ nohup ./busco_new.sh &
 
 ``python3 generate_plot.py --working_directory /home/styab21/scratch/busco_results/short_summaries``
 
+!!  These graphs are very low quality and messy due to high genome no. they represent so the alternative is to create a graph in Excel using the ``batch_summary.txt`` file created by Busco !!!
+
+
 ## Installing Roary 
 
 - Download using: mamba install -c bioconda conda-forge roary=1.13.0
