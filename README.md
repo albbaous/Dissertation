@@ -197,6 +197,6 @@ nohup ./busco_new.sh &
 
 - Run this to generate newick tree: ``FastTree -nt -gtr core_gene_alignment.aln > my_tree.newick``
 
-- Then this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
+- Then run this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
 
 
