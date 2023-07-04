@@ -92,6 +92,28 @@ nohup ./busco_new.sh &
 
 - -o defines the folder that will contain all results, logs, and intermediate data
 
+### Creating BUSCO graphs 
+
+- This can be run in the command line
+
+- Run this to move all short_summary* files in one directory: ``find . -type f -name 'short_summary*' -exec cp {} /home/styab21/scratch/busco_results/short_summaries \;``
+
+- Start R and run the following:
+
+(answer yes to install the package to your personal library)
+
+``install.packages("ggplot2")``
+
+``q(save="no") ``
+
+- Move to the directory where busco is saved and then into the bin. For example I would do:
+
+``cd /home/styab21/miniconda3/envs/busco2_env/bin``
+
+- Run script for graphs:
+
+``python3 generate_plot.py --working_directory /home/styab21/scratch/busco_results/short_summaries``
+
 ## Installing Roary 
 
 - Download using: mamba install -c bioconda conda-forge roary=1.13.0
