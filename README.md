@@ -44,7 +44,7 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 nohup ./prokka.sh & 
 
-### Breaking down prokka.sh 
+### Breaking down ``prokka.sh``
 -	--outdir specifies the output directory for Prokka results as $dir/prokka, where $dir is the directory extracted from the file path.
 	
 -	--prefix sets the prefix for Prokka output files to the $genome_name, which represents the name of the current genome.
@@ -57,7 +57,7 @@ nohup ./prokka.sh &
 
 -	$file represents the input genome file to be processed by Prokka.
 
-## Running and understanding movefna.sh (for BUSCO analysis) and movegff.sh (for Roary) on Tomoko 
+## Running and understanding ``movefna.sh`` (for BUSCO analysis) and ``movegff.sh`` (for Roary) on Tomoko 
 
 - These create new directories which include only the files necessary for BUSCO and Roary analyses. They have similar features: 
 
@@ -79,7 +79,7 @@ nohup ./prokka.sh &
 
 - Run on Tomoko using the command: 
 
-nohup ./busco_new.sh
+nohup ./busco_new.sh &
 
 ### Breaking down BUSCO 
 - -i the input file to analyse which is the .fna files in /prokka_fna_files
@@ -106,18 +106,21 @@ nohup ./busco_new.sh
   
 #### Divide and Conquer 
 
-- Genomes were split into 11 subdirectories, 10 of which contained 25 genomes and 1 of which had 8. This was done using the script directory.sh
+- Genomes were split into 11 subdirectories, 10 of which contained 25 genomes and 1 of which had 8. This was done using the script ``directory.sh``
 
-- directory.sh created 11 directories labelled directory_1, directory_2 and so on
+- ``directory.sh`` created 11 directories labelled directory_1, directory_2 and so on
 
-#### Next, fibonacci_directories.sh:
+#### Next, ``fibonacci_directories.sh``:
+
+- Not quite like the fibonacci sequence, but name is memorable
+
 - Copied the contents of directory_1 to a new directory called A.
 
 - Copied the contents of directories_1 and directory_2 to a new directory called B.
 
 - Copied the contents of directories_1,_2, and_3 to a new directory called C.
 
-- Overall, this script creates a series of output directories and populates them with the cumulative contents of the corresponding source directories (created by directory.sh)
+- Overall, this script creates a series of output directories and populates them with the cumulative contents of the corresponding source directories (created by ``directory.sh``)
 
 - This means that Roary could be run in parallel in each directory (A-K), to spot which files were failing it
 
@@ -127,20 +130,20 @@ nohup ./busco_new.sh
 
 - Directories A-H were successful in producing roary outputs but I,J,K were not so what was problematic about them?
 
-#### Using problem_directories.sh to combine directory_9, 10 and 11 which contain the files roary failed on: 
+#### Using ``problem_directories.sh`` to combine directory_9, 10 and 11 which contain the files roary failed on: 
 
 - This assesses whether there is was an issue with specific files or whether it was the volume of files that troubled roary since I,J,K contained more files than previous directories.
 
 - Running roary on the resultant directory showed no issues so the files were all fine. 
 
 #### Combining directory H with directory_11
-- This was done using the script H_K.sh
+- This was done using the script ``H_K.sh``
 
 - This was a last attempt at getting roary to run on as many files as possible
 
 ## Running Roary 
 
-- Run on Augusta using the command: sbatch roary.sh
+- Run on Augusta using the command: sbatch ``roary.sh``
 
 ### Breaking down Roary 
 - -f Specifies the output directory for Roary results
