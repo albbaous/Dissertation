@@ -28,9 +28,9 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
   
 - Use filters "Reference genomes", “Annotated by NCBI RefSeq”, “complete” (asssembly level), “2021-2023”
   
-- May need to retrieve dataset from "bin" if using MacOS operating system. 
+- May need to retrieve dataset from ``bin`` if using MacOS operating system. 
   
-- Unzip files in ncbi_dataset/data directory and transfer to remote, using scp command or FileZilla (https://filezilla-project.org)
+- Unzip files in ``ncbi_dataset/data`` directory and transfer to remote, using scp command or FileZilla (https://filezilla-project.org)
 
 ## Running Prokka 
 
@@ -133,15 +133,15 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Genomes were split into 11 subdirectories, 10 of which contained 25 genomes and 1 of which had 8. This was done using the script ``directory.sh``
 
-- ``directory.sh`` created 11 directories labelled directory_1, directory_2 and so on
+- ``directory.sh`` created 11 directories labelled ``directory_1``, ``directory_2`` and so on
 
 #### Next, ``fibonacci_directories.sh``:
 
 - Not quite like the fibonacci sequence, but name is memorable
 
-- Copied the contents of directory_1 to a new directory called A.
+- Copied the contents of ``directory_1`` to a new directory called ``A``.
 
-- Copied the contents of directories_1 and directory_2 to a new directory called B.
+- Copied the contents of ``directories_1`` and ``directory_2`` to a new directory called ``B``.
 
 - Copied the contents of directories_1,_2, and_3 to a new directory called C.
 
