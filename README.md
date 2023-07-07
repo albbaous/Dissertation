@@ -143,21 +143,21 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Copied the contents of ``directories_1`` and ``directory_2`` to a new directory called ``B``.
 
-- Copied the contents of directories_1,_2, and_3 to a new directory called C.
+- Copied the contents of directories_1,_2, and_3 to a new directory called ``C``.
 
 - Overall, this script creates a series of output directories and populates them with the cumulative contents of the corresponding source directories (created by ``directory.sh``)
 
-- This means that Roary could be run in parallel in each directory (A-K), to spot which files were failing it
+- This means that Roary could be run in parallel in each directory (``A``-``K``), to spot which files were failing it
 
 - There were a lot of questions raised like "is it the number of files?" or "is it 1 bad file failing it?" or "is it a group of files??"
 
 - This is what splitting them up helped to clarify.
 
-- Directories A-H were successful in producing roary outputs but I,J,K were not so what was problematic about them?
+- Directories ``A``-``H`` were successful in producing roary outputs but ``I``,``J``,``K`` were not so what was problematic about them?
 
 #### Using ``problem_directories.sh`` to combine directory_9, 10 and 11 which contain the files roary failed on: 
 
-- This assesses whether there is was an issue with specific files or whether it was the volume of files that troubled roary since I,J,K contained more files than previous directories.
+- This assesses whether there is was an issue with specific files or whether it was the volume of files that troubled roary since ``I``,``J``,``K`` contained more files than previous directories.
 
 - Running roary on the resultant directory showed no issues so the files were all fine. 
 
@@ -207,15 +207,15 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 Using the makeblast db command: 
 
-- ``in`` Defines the input fasta files
+- ``-in`` Defines the input fasta files
 
-- ``dbtype`` Sets the type of database to be made. Here it is ``nucl`` for "nucleotide"
+- ``-dbtype`` Sets the type of database to be made. Here it is ``nucl`` for "nucleotide"
   
-- ``parse-seqids`` Indicates that the sequence IDs from the FASTA file should be included in the database 
+- ``-parse-seqids`` Indicates that the sequence IDs from the FASTA file should be included in the database 
 
-- ``title`` Defines the title of the database. Here it is ``combined``
+- ``-title`` Defines the title of the database. Here it is ``combined``
 
-- ``out`` Sets the output directory 
+- ``-out`` Sets the output directory 
 
 ### Making a query database from all NDM sequences using ``ndm_search.sh``
 
@@ -225,7 +225,17 @@ https://card.mcmaster.ca/download
 
 - Run the ``ndm_search.sh`` script to compile all NDM gene sequences, as stated on the ``nucleotide_fasta_protein_homolog_model.fasta``  from the downloaded CARD info, in one query fasta 
 
-### Running blastn using ``blast_search.sh``
+### Running blastn using ``blast_search.sh`
+
+``blastn`` was used since NDM sequences are in nucleotide format
+
+- ``-db`` Sets the name of the BLAST database used. Here it is ``combined``
+
+- ``-query`` Sets the name of the query fasta created. Here it is ``ndm_all.fasta``
+
+- ``-out`` Defines the output file ``results.txt``
+
+- ``-outfmt`` Sets the format results are to be printed in. Here it is ``6`` to achieve a similar format to a ``.csv`` file
 
 
 
