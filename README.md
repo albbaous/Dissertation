@@ -217,6 +217,16 @@ Using the makeblast db command:
 
 - ``out`` Sets the output directory 
 
-### 
+### Making a query database from all NDM sequences using ``ndm_search.sh``
+
+- Download necessary CARD (Comprehensive Antibiotic Resistance Database) data here:
+
+https://card.mcmaster.ca/download
+
+- Run the ``ndm_search.sh`` script to compile all NDM gene sequences, as stated on the ``nucleotide_fasta_protein_homolog_model.fasta``  from the downloaded CARD info, in one query fasta 
+
+### Running blastn using ``blast_search.sh``
+
+
 
 
