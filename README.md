@@ -2,19 +2,19 @@
 A repository containing code for the dissertation titled "" by Alexandra Baousi 
 
 ## Basic Code 
-- Run a batch file:    sbatch file.sh 
+- Run a batch file:    ``sbatch file.sh`` 
 
-- Read the queue for jobs in SLURM:    squeue -u username
+- Read the queue for jobs in SLURM:    ``squeue -u username``
   
-- Open compressed files:    zless file.zip 
+- Open compressed files:    ``zless file.zip``
   
-- Cancel job:    scancel jobnumber  
+- Cancel job:   ``scancel jobnumber``  
   
-- Check on job progress:  sacct 
+- Check on job progress:  ``sacct`` 
   
-- Make file executable:  chmod +x file.sh
+- Make file executable:  ``chmod +x file.sh``
   
-- Check file permissions for all files in directory:  ls -ltr 
+- Check file permissions for all files in directory:  ``ls -ltr`` 
 
 - Command to transfer files from remote to local: 
 
@@ -34,7 +34,7 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 ## Running Prokka 
 
-- Download using: mamba install -c bioconda -c conda-forge prokka=1.14.6
+- Download using: ``mamba install -c bioconda -c conda-forge prokka=1.14.6``
 
 -  !!! When running bash shell scripts on Tomoko make sure the conda env is activated prior to running them !!!
 
@@ -42,30 +42,30 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Run on Tomoko using the command: 
 
-nohup ./prokka.sh & 
+``nohup ./prokka.sh & ``
 
 ### Breaking down ``prokka.sh``
--	--outdir specifies the output directory for Prokka results as $dir/prokka, where $dir is the directory extracted from the file path.
+-	``--outdir`` specifies the output directory for Prokka results as $dir/prokka, where ``$dir`` is the directory extracted from the file path.
 	
--	--prefix sets the prefix for Prokka output files to the $genome_name, which represents the name of the current genome.
+-	``--prefix`` sets the prefix for Prokka output files to the $genome_name, which represents the name of the current genome.
 	
--	--force forces Prokka to overwrite existing output files if they already exist.
+-	``--force`` forces Prokka to overwrite existing output files if they already exist.
 	
--	--addgenes includes additional gene finding during the annotation process.
+-	``--addgenes`` includes additional gene finding during the annotation process.
 	
--	--locustag sets the locus tag to the $genome_name, which helps identify the genes in the annotation output.
+-	``--locustag`` sets the locus tag to the $genome_name, which helps identify the genes in the annotation output.
 
--	$file represents the input genome file to be processed by Prokka.
+-	``$file`` represents the input genome file to be processed by Prokka.
 
 ## Running and understanding ``movefna.sh`` (for BUSCO analysis) and ``movegff.sh`` (for Roary) on Tomoko 
 
 - These create new directories which include only the files necessary for BUSCO and Roary analyses. They have similar features: 
 
-- mkdir -p ensures that the target directory is created only if it doesn't already exist
+- ``mkdir -p`` ensures that the target directory is created only if it doesn't already exist
 
-- find command searches for all files (-type f) in the $source_dir directory and its subdirectories that have the right extension (-name "*.fna" or "*.gff")
+- find command searches for all files (-type f) in the ``$source_dir`` directory and its subdirectories that have the right extension (-name "*.fna" or "*.gff")
 
-- -exec mv executes the mv command to move files to the $target_dir
+- ``-exec mv`` executes the mv command to move files to the ``$target_dir``
 
 - {} placeholder represents the found file
 
@@ -73,24 +73,24 @@ nohup ./prokka.sh &
 
 ## Running BUSCO 
 
-- Download using: mamba install -c bioconda -c conda-forge busco=5.4.7
+- Download using: ``mamba install -c bioconda -c conda-forge busco=5.4.7``
 
 - Activate BUSCO environment prior to running!! (keep activated during)
 
 - Run on Tomoko using the command: 
 
-nohup ./busco_new.sh &
+``nohup ./busco_new.sh &``
 
 ### Breaking down BUSCO 
-- -i the input file to analyse which is the .fna files in /prokka_fna_files
+- ``-i`` the input file to analyse which is the ``.fna`` files in ``/prokka_fna_files``
 
-- -l or --lineage_dataset which is gammaproteobacteria_odb10 
+- ``-l`` or ``--lineage_dataset`` which is ``gammaproteobacteria_odb10`` 
 
 !! it is important to have the latest version of BUSCO (v 5.4.7) as earlier ones do not have the gammaproteobacteria dataset !!
 
-- -m or --mode sets the assessment MODE: genome, proteins, transcriptome
+- ``-m`` or ``--mode`` sets the assessment MODE: ``genome`` in this case
 
-- -o defines the folder that will contain all results, logs, and intermediate data
+- ``-o`` defines the folder that will contain all results, logs, and intermediate data
 
 ### Creating BUSCO graphs 
 
@@ -119,7 +119,7 @@ nohup ./busco_new.sh &
 
 ## Installing Roary 
 
-- Download using: mamba install -c bioconda conda-forge roary=1.13.0
+- Download using: ``mamba install -c bioconda conda-forge roary=1.13.0``
 
 ### Prior to running Roary !!!! Understanding the need to split it up into smaller directories 
 
@@ -171,25 +171,25 @@ nohup ./busco_new.sh &
 - Run on Augusta using the command: sbatch ``roary.sh``
 
 ### Breaking down Roary 
-- -f Specifies the output directory for Roary results
+- ``-f`` Specifies the output directory for Roary results
 
-- -e createS a multiFASTA alignment of core genes using PRANK
+- ``-e`` createS a multiFASTA alignment of core genes using PRANK
 
-- -v enables verbose output
+- ``-v`` enables verbose output
 
-- --mafft runs multiple sequence alignment using MAFFT
+- ``--mafft`` runs multiple sequence alignment using MAFFT
 
-- -p specifies the number of CPUs to be used (40 in this case)
+- ``-p`` specifies the number of CPUs to be used (40 in this case)
 
-- -i Sets the minimum percentage identity for BLASTp comparisons (30 in this case)
+- ``-i`` Sets the minimum percentage identity for BLASTp comparisons (30 in this case)
 
-- -s ensures paralogs are not split
+- ``-s`` ensures paralogs are not split
 
-- -g sets maximum number of clusters (400000 in this case)
+- ``-g`` sets maximum number of clusters (400000 in this case)
 
-- -iv sets the MCL inflation value for clustering (1.2 in this case)
+- ``-iv`` sets the MCL inflation value for clustering (1.2 in this case)
 
-- *.gff specifies the input GFF files for Roary.
+- ``*.gff`` specifies the input GFF files for Roary.
 
 ### Creating Roary plots 
 
@@ -198,5 +198,12 @@ nohup ./busco_new.sh &
 - Run this to generate newick tree: ``FastTree -nt -gtr core_gene_alignment.aln > my_tree.newick``
 
 - Then run this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
+
+## Preparing files for Scoary
+
+- Scoary takes ``gene_presence_absence.csv`` from Roary and a ``traits.csv`` made by the user
+
+### Making a blastable database of genome fasta files using ``blast.sh``
+
 
 
