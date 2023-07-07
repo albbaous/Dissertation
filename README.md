@@ -205,5 +205,18 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 ### Making a blastable database of genome fasta files using ``blast.sh``
 
+Using the makeblast db command: 
+
+- ``in`` Defines the input fasta files
+
+- ``dbtype`` Sets the type of database to be made. Here it is ``nucl`` for "nucleotide"
+  
+- ``parse-seqids`` Indicates that the sequence IDs from the FASTA file should be included in the database 
+
+- ``title`` Defines the title of the database. Here it is ``combined``
+
+- ``out`` Sets the output directory 
+
+### 
 
 
