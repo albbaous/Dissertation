@@ -225,7 +225,7 @@ https://card.mcmaster.ca/download
 
 - Run the ``ndm_search.sh`` script to compile all NDM gene sequences, as stated on the ``nucleotide_fasta_protein_homolog_model.fasta``  from the downloaded CARD info, in one query fasta 
 
-### Running blastn using ``blast_search.sh`
+### Running blastn using ``blast_search.sh``
 
 ``blastn`` was used since NDM sequences are in nucleotide format
 
