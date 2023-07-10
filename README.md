@@ -197,6 +197,8 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Run this to generate newick tree: ``FastTree -nt -gtr core_gene_alignment.aln > my_tree.newick``
 
+- Get the ``roary_plots.py`` script from https://github.com/sanger-pathogens/Roary/tree/master/contrib/roary_plots
+
 - Then run this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
 
 ## Preparing files for Scoary
