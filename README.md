@@ -250,7 +250,7 @@ https://card.mcmaster.ca/download
 
 - ``-db`` Sets the name of the BLAST database used. Here it is ``combined``
 
-- ``-query`` Sets the name of the query fasta created. Here it is "ndm_all.fasta" but this can be changed according to gene being sought out. 
+- ``-query`` Sets the name of the query fasta created. Here it is ``ndm_all.fasta`` but this can be changed according to gene being sought out. 
 
 - ``-out`` Defines the output file ``results.txt``
 
