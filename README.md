@@ -201,10 +201,13 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Then run this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
 
+### Brief venture into panaroo (``panaroo3.sh``) as alternative (did not work out) 
+
 ## Preparing files for Scoary
 
 - Scoary takes ``gene_presence_absence.csv`` from Roary and a ``traits.csv`` made by the user
 
+### 1) CARD (did not work out) 
 ### Making a blastable database of genome fasta files using ``blast.sh``
 
 Using the makeblast db command: 
@@ -219,25 +222,35 @@ Using the makeblast db command:
 
 - ``-out`` Sets the output directory 
 
-### Making a query database from all NDM sequences using ``ndm_search.sh``
+### Making a query database from all NDM sequences using ``gene_copy.sh``
 
 - Download necessary CARD (Comprehensive Antibiotic Resistance Database) data here:
 
 https://card.mcmaster.ca/download
 
-- Run the ``ndm_search.sh`` script to compile all NDM gene sequences, as stated on the ``nucleotide_fasta_protein_homolog_model.fasta``  from the downloaded CARD info, in one query fasta 
+- Run the ``gene_copy.sh`` script to compile all sequences of gene of interest (i.e. NDM), as stated on the ``nucleotide_fasta_protein_homolog_model.fasta``  from the downloaded CARD info, in one query fasta
+
+- Change ``line 10`` in the script to set the ``pattern`` to the name of the gene as found on CARD.
+
+- Change ``line 7`` in the script to rename the output fasta to match the gene you are looking for
 
 ### Running blastn using ``blast_search.sh``
 
-``blastn`` was used since NDM sequences are in nucleotide format
+``blastn`` was used since gene sequences are in nucleotide format
 
 - ``-db`` Sets the name of the BLAST database used. Here it is ``combined``
 
-- ``-query`` Sets the name of the query fasta created. Here it is ``ndm_all.fasta``
+- ``-query`` Sets the name of the query fasta created. Here it is "ndm_all.fasta" but this can be changed according to gene being sought out. 
 
 - ``-out`` Defines the output file ``results.txt``
 
 - ``-outfmt`` Sets the format results are to be printed in. Here it is ``6`` to achieve a similar format to a ``.csv`` file
+
+### Using ``final.py`` to convert ``results.txt`` to ``traits.csv``
+
+- Run this python script using the ``run_py.sh`` script to format results for input into scoary
+
+### Lack of CARD traits significance so moving onto Crisprcasfinder instead 
 
 
 
