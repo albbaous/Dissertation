@@ -201,9 +201,17 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Then run this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
 
-### Brief venture into panaroo (``panaroo3.sh``) as alternative (did not work out) 
+## Brief venture into panaroo (``panaroo3.sh``) as alternative (did not work out) 
 
 - Download using: ``mamba install -c bioconda conda-forge panaroo=1.3.3``
+
+### Running and understanding panaroo 
+
+- Run on Augusta using: ``sbatch panaroo3.sh``
+
+- ``-i`` Specifies input
+
+- 
 
 ## Preparing files for Scoary
 
