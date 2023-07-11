@@ -3,10 +3,10 @@
 # Input FASTA file
 input_file="/home/styab21/scratch/nucleotide_fasta_protein_homolog_model.fasta"
 
-# Output file for NDM sequences
+# Output file for gene sequences
 output_file="/home/styab21/scratch/fasta_files/ndm_all.fasta"
 
-# Pattern to match for NDM sequences
+# Pattern to match for gene sequences
 pattern="NDM"
 
 # Initialize the output file
@@ -16,7 +16,7 @@ pattern="NDM"
 while IFS= read -r line; do
     # Check if the line starts with '>'
     if [[ $line =~ ^\> ]]; then
-        # Check if the description contains 'NDM'
+        # Check if the description contains gene name
         if [[ $line =~ $pattern ]]; then
             # Write the description line to the output file
             echo "$line" >> "$output_file"
