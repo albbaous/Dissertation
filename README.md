@@ -216,8 +216,6 @@ Using the makeblast db command:
 
 - ``-dbtype`` Sets the type of database to be made. Here it is ``nucl`` for "nucleotide"
   
-- ``-parse-seqids`` Indicates that the sequence IDs from the FASTA file should be included in the database 
-
 - ``-title`` Defines the title of the database. Here it is ``combined``
 
 - ``-out`` Sets the output directory 
@@ -250,7 +248,7 @@ https://card.mcmaster.ca/download
 
 - Run this python script using the ``run_py.sh`` script to format results for input into scoary
 
-### Lack of CARD traits significance so moving onto Crisprcasfinder instead 
+### 2) Lack of CARD traits significance so moving onto Crisprcasfinder instead 
 
 
 
