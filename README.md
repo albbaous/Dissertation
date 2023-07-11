@@ -274,6 +274,30 @@ https://card.mcmaster.ca/download
 
 ### 2) Lack of CARD traits significance so moving onto Crisprcasfinder instead 
 
+- Download all crisprcasfinder associated files: 
 
+https://github.com/dcouvin/CRISPRCasFinder
 
+- Download crisprcasfinder using Conda :
+
+```
+conda env create -f ccf.environment.yml -n crisprcasfinder
+conda activate crisprcasfinder
+mamba init
+mamba activate
+mamba install -c bioconda macsyfinder=2.0
+macsydata install -u CASFinder==3.1.0
+```
+
+### Run ``running_crisp.sh``
+
+- This runs crisprcasfinder on the dataset using ``CRISPRCasFinder.pl``  
+
+### Run ``tsv_rename.sh`` 
+
+- This renames all relevant crisprcas files to include their original genome ID (from RefSeq download) 
+
+### Run ``merge.sh`` 
+
+- This merges all ``CRISPR-Cas_summary_*.xls`` files into one big file, seperating them with genome IDs
 
