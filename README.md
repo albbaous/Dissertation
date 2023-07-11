@@ -232,7 +232,7 @@ https://card.mcmaster.ca/download
 
 - Change ``line 7`` in the script to rename the output fasta to match the gene you are looking for
 
-### Running blastn using ``blast_search.sh``
+### Running blastn using ``blast_run.sh``
 
 ``blastn`` was used since gene sequences are in nucleotide format
 
