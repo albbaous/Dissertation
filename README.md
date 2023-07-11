@@ -244,7 +244,7 @@ https://card.mcmaster.ca/download
 
 ### Running blastn using ``blast_run.sh``
 
-- Download BLAST using:``mamba install -c bioconda conda-forge blast=2.14`
+- Download BLAST using:``mamba install -c bioconda conda-forge blast=2.14``
 
 ``blastn`` was used since gene sequences are in nucleotide format
 
