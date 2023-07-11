@@ -209,9 +209,21 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Run on Augusta using: ``sbatch panaroo3.sh``
 
-- ``-i`` Specifies input
+- ``-i`` Input directory
 
-- 
+- ``-o`` Output directory or file prefix for Panaroo results.
+
+- ``-clean-mode`` The stringency mode at which to run panaroo set to ``sensitive``
+
+- ``-c`` Sequence identity threshold (default=0.98) set to``0.4`` 
+
+- ``-a`` Output alignments of core genes or all genes. Here it is set to ``core``
+  
+- ``-aligner`` Sets the ``clustal`` aligner for multiple sequence alignment.
+
+- ``-core_threshold`` Minimum nucleotide identity threshold for core gene identification set to ``0.98``
+
+- ``-t`` Number of threads (CPU cores) to use for parallel processing. Here it is ``40``
 
 ## Preparing files for Scoary
 
