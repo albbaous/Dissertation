@@ -16,11 +16,9 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
   
 - Check file permissions for all files in directory:  ``ls -ltr`` 
 
-- Command to transfer files from remote to local: 
+- Command to transfer files from remote to local: ``scp username@hpc.address:/path/on/hpc /path/on/local/machine``
 
-- Command to transfer files from local to remote: 
-
-- Command to transfer files from Tomoko to Augusta: 
+- Command to transfer files from local to remote: ``scp /path/to/local/file username@hpc.address:/path/on/hpc``
 
 ## Downloading genomes 
 
