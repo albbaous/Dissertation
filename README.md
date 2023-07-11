@@ -203,6 +203,8 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 ### Brief venture into panaroo (``panaroo3.sh``) as alternative (did not work out) 
 
+- Download using: ``mamba install -c bioconda conda-forge panaroo=1.3.3``
+
 ## Preparing files for Scoary
 
 - Scoary takes ``gene_presence_absence.csv`` from Roary and a ``traits.csv`` made by the user
@@ -233,6 +235,8 @@ https://card.mcmaster.ca/download
 - Change ``line 7`` in the script to rename the output fasta to match the gene you are looking for
 
 ### Running blastn using ``blast_run.sh``
+
+- Download BLAST using:``mamba install -c bioconda conda-forge blast=2.14`
 
 ``blastn`` was used since gene sequences are in nucleotide format
 
