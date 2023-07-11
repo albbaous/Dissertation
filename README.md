@@ -208,7 +208,7 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 - Scoary takes ``gene_presence_absence.csv`` from Roary and a ``traits.csv`` made by the user
 
 ### 1) CARD (did not work out) 
-### Making a blastable database of genome fasta files using ``blast.sh``
+### Making a blastable database of genome fasta files using ``blast_db.sh``
 
 Using the makeblast db command: 
 
