@@ -100,9 +100,11 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 (answer yes to install the package to your personal library)
 
-``install.packages("ggplot2")``
+```
+install.packages("ggplot2")
 
-``q(save="no") ``
+q(save="no")
+```
 
 - Move to the directory where busco is saved and then into the bin. For example I would do:
 
@@ -265,6 +267,10 @@ https://card.mcmaster.ca/download
 - ``-out`` Defines the output file ``results.txt``
 
 - ``-outfmt`` Sets the format results are to be printed in. Here it is ``6`` to achieve a similar format to a ``.csv`` file
+
+### Use this to check no. of hits without needing to move to next step 
+
+``grep -oP '^\S+\t(GCF_[[:alnum:]_]+)' results.txt | cut -f 2 | sort -u | wc -l``
 
 ### Using ``final.py`` to convert ``results.txt`` to ``traits.csv``
 
