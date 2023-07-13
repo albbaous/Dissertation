@@ -32,7 +32,11 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 ## Running Prokka 
 
-- Download using: ``mamba install -c bioconda -c conda-forge prokka=1.14.6``
+- Download using:
+
+```
+mamba install -c bioconda -c conda-forge prokka=1.14.6
+```
 
 -  !!! When running bash shell scripts on Tomoko make sure the conda env is activated prior to running them !!!
 
@@ -77,7 +81,9 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - Run on Tomoko using the command: 
 
-``nohup ./busco_new.sh &``
+```
+nohup ./busco_new.sh &
+```
 
 ### Breaking down BUSCO 
 - ``-i`` the input file to analyse which is the ``.fna`` files in ``/prokka_fna_files``
@@ -94,7 +100,12 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 
 - This can be run in the command line
 
-- Run this to move all short_summary* files in one directory: ``find . -type f -name 'short_summary*' -exec cp {} /home/styab21/scratch/busco_results/short_summaries \;``
+- Run this to move all short_summary* files in one directory:
+
+```
+find . -type f -name 'short_summary*' -exec cp {} /path/to/short_summaries \;
+
+```
 
 - Start R and run the following:
 
@@ -112,14 +123,21 @@ q(save="no")
 
 - Run script for graphs:
 
-``python3 generate_plot.py --working_directory /home/styab21/scratch/busco_results/short_summaries``
+```
+python3 generate_plot.py --working_directory /path/to/short_summaries
+
+```
 
 !!  These graphs are very low quality and messy due to high genome no. they represent so the alternative is to create a graph in Excel using the ``batch_summary.txt`` file created by Busco !!!
 
 
 ## Installing Roary 
 
-- Download using: ``mamba install -c bioconda conda-forge roary=1.13.0``
+- Download using:
+
+```
+mamba install -c bioconda conda-forge roary=1.13.0
+```
 
 ### Prior to running Roary !!!! Understanding the need to split it up into smaller directories 
 
@@ -168,7 +186,11 @@ q(save="no")
 
 ## Running Roary 
 
-- Run on Augusta using the command: sbatch ``roary.sh``
+- Run on Augusta using the command:
+
+```
+sbatch roary.sh
+```
 
 ### Breaking down Roary 
 - ``-f`` Specifies the output directory for Roary results
@@ -193,21 +215,41 @@ q(save="no")
 
 ### Creating Roary plots 
 
-- Download FastTree (to a conda environment):  ``mamba install -c bioconda fasttree``
+- Download FastTree (to a conda environment):
 
-- Run this to generate newick tree: ``FastTree -nt -gtr core_gene_alignment.aln > my_tree.newick``
+```
+ mamba install -c bioconda fasttree
+```
+
+- Run this to generate newick tree:
+  
+```
+FastTree -nt -gtr core_gene_alignment.aln > my_tree.newick
+```
 
 - Get the ``roary_plots.py`` script from https://github.com/sanger-pathogens/Roary/tree/master/contrib/roary_plots
 
-- Then run this: ``python roary_plots.py my_tree.newick gene_presence_absence.csv``
+- Then run this:
+
+```
+python roary_plots.py my_tree.newick gene_presence_absence.csv
+```
 
 ## Brief venture into panaroo (``panaroo3.sh``) as alternative (did not work out) 
 
-- Download using: ``mamba install -c bioconda conda-forge panaroo=1.3.3``
+- Download using:
+
+```
+mamba install -c bioconda conda-forge panaroo=1.3.3
+```
 
 ### Running and understanding panaroo 
 
-- Run on Augusta using: ``sbatch panaroo3.sh``
+- Run on Augusta using:
+
+```
+sbatch panaroo3.sh
+```
 
 - ``-i`` Input directory
 
@@ -256,7 +298,11 @@ https://card.mcmaster.ca/download
 
 ### Running blastn using ``blast_run.sh``
 
-- Download BLAST using:``mamba install -c bioconda conda-forge blast=2.14``
+- Download BLAST using:
+
+```
+mamba install -c bioconda conda-forge blast=2.14
+```
 
 ``blastn`` was used since gene sequences are in nucleotide format
 
