@@ -307,4 +307,6 @@ macsydata install -u CASFinder==3.1.0
 
 - This merges all ``CRISPR-Cas_summary_*.xls`` files into one big file, seperating them with genome IDs
 
+- Creates ``merged_Final.xls`` which is the wrong format so needs to be converted in Microsoft Excel to ``Excel 97-2004 Workbook (.xls)``
+
 
