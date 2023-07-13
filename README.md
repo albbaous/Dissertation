@@ -363,4 +363,64 @@ macsydata install -u CASFinder==3.1.0
 
 - Creates ``merged_Final.xls`` which is the wrong format so needs to be converted in Microsoft Excel to ``Excel 97-2004 Workbook (.xls)``
 
+### Run ``traits.py`` 
+
+- This creates the traits file but it doesn't print the first line for some reason so this was added manually.
+
+  !! Top 2 rows have to be edited manually with this script!!
+
+- 6 other genomes from the 208 were also not printed due to a mislabelling error from ``tsv_rename.sh``
+
+- These are the 6 genomes:
+
+```
+Result_GCF_018394375_1689251354,1,0 
+Result_GCF_017329545_1689249925,1,0
+Result_GCF_024582835_1689259432,1,1 
+Result_GCF_024362845_1689259303,1,0 
+Result_GCF_027286365_1689260472,1,1
+Result_GCF_025758125_1689260065,1,0
+
+```
+
+- Run this to print all the crisprcasfinder directory titles into a txt file (``directory_titles.txt``):
+
+```
+find -type d -name "Result_GCF*" -printf "%f\n" > directory_titles.txt
+
+```
+
+### Run ``match.py``
+
+- This generated ``unmatched_rows.txt`` to show which genomes did not make it to the ``traits.csv``
+
+- Manually add these to the ``traits.csv``
+
+
+### Run ``column.py`` to get the names of genomes as written in the ``gene_presence_abscence.csv``
+
+- This takes all the names from column 15 onwards in the first row of the ``gene_presence_abscence.csv``
+
+- This lists all the original names of genomes
+
+- Creates ``column_15_names.txt``
+
+### Run ``traits5.sh`` to replace the names given to genomes by crisprcasfinder with original names 
+
+- This matches genomes in ``traits.csv`` to genomes in the ``column_15_names.txt``
+
+- Matches the first 9 digits after ``Result_GCF_`` in ``traits.csv`` to the first 9 digits after ``GCF_`` in ``column_15_names.txt``
+
+- If the first 9 digits match, it replaces the ``Result_GCF`` name in the ``traits.csv`` with the GCF name
+
+- One of the genomes (Result_GCF_914590485_1689261328) does not match the genomes from Roary so it should be removed
+
+### Run ``transform.py``
+
+- This makes sure ``traits.csv`` is written in the correct csv format since there was a lot of manual editing
+
+!! Remove the top left corner value that it adds as that should remain empty !!
+
+
+
 
