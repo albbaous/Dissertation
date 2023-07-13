@@ -33,7 +33,6 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 ## Running Prokka 
 
 - Download using:
-
 ```
 mamba install -c bioconda -c conda-forge prokka=1.14.6
 ```
@@ -44,7 +43,9 @@ mamba install -c bioconda -c conda-forge prokka=1.14.6
 
 - Run on Tomoko using the command: 
 
-``nohup ./prokka.sh & ``
+```
+nohup ./prokka.sh &
+```
 
 ### Breaking down ``prokka.sh``
 -	``--outdir`` specifies the output directory for Prokka results as $dir/prokka, where ``$dir`` is the directory extracted from the file path.
@@ -75,7 +76,10 @@ mamba install -c bioconda -c conda-forge prokka=1.14.6
 
 ## Running BUSCO 
 
-- Download using: ``mamba install -c bioconda -c conda-forge busco=5.4.7``
+- Download using:
+```
+mamba install -c bioconda -c conda-forge busco=5.4.7
+```
 
 - Activate BUSCO environment prior to running!! (keep activated during)
 
@@ -104,7 +108,6 @@ nohup ./busco_new.sh &
 
 ```
 find . -type f -name 'short_summary*' -exec cp {} /path/to/short_summaries \;
-
 ```
 
 - Start R and run the following:
@@ -125,7 +128,6 @@ q(save="no")
 
 ```
 python3 generate_plot.py --working_directory /path/to/short_summaries
-
 ```
 
 !!  These graphs are very low quality and messy due to high genome no. they represent so the alternative is to create a graph in Excel using the ``batch_summary.txt`` file created by Busco !!!
