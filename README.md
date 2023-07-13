@@ -328,6 +328,8 @@ grep -oP '^\S+\t(GCF_[[:alnum:]_]+)' results.txt | cut -f 2 | sort -u | wc -l
 
 - Run this python script using the ``run_py.sh`` script to format results for input into scoary
 
+- This script labels traits as ``oxa_presence`` - this can be altered in line to give the right gene name
+
 ### 2) Lack of CARD traits significance so moving onto Crisprcasfinder instead 
 
 - Download all crisprcasfinder associated files: 
