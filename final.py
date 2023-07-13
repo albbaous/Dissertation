@@ -1,10 +1,10 @@
 import csv
 
 # Path to the output CSV file
-output_file = "/home/styab21/scratch/fasta_files/fasta_files/combined/output.cs$
+output_file = "/home/styab21/scratch/fasta_files/fasta_files/combined/output.csv"
 
 # Path to the BLAST results file
-blast_results_file = "/home/styab21/scratch/fasta_files/fasta_files/combined/re$
+blast_results_file = "/home/styab21/scratch/fasta_files/fasta_files/combined/results.txt"
 
 # Create a set to store the gene presence information
 gene_presence = set()
@@ -30,7 +30,10 @@ with open(output_file, "r") as file:
             updated_rows.append(row)
 
 # Write the updated rows to a new output CSV file
-new_output_file = "/home/styab21/scratch/fasta_files/fasta_files/combined/updat$
+new_output_file = "/home/styab21/scratch/fasta_files/fasta_files/combined/updated_output.csv"
 with open(new_output_file, "w", newline="") as file:
     writer = csv.writer(file)
     writer.writerows(updated_rows)
+
+
+
