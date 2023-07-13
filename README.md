@@ -277,6 +277,7 @@ sbatch panaroo3.sh
 
 ### 1) CARD (did not work out) 
 ### Making a blastable database of genome fasta files using ``blast_db.sh``
+- Run the following scripts for this on Tomoko - not many resources required for these
 
 Using the makeblast db command: 
 
@@ -419,6 +420,19 @@ find -type d -name "Result_GCF*" -printf "%f\n" > directory_titles.txt
 
 !! Remove the top left corner value that it adds as that should remain empty !!
 
+## Running Scoary 
 
+- Download using:
+
+```
+mamba install -c bioconda conda-forge scoary=1.6.16
+```
+### Understanding Scoary 
+
+Use default parameters:
+
+- ``-g`` Set to ``gene_presence_absence.csv``
+  
+- ``-t`` Set to ``traits.csv`` 
 
 
