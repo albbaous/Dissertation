@@ -328,7 +328,7 @@ grep -oP '^\S+\t(GCF_[[:alnum:]_]+)' results.txt | cut -f 2 | sort -u | wc -l
 
 - Run this python script using the ``python3 oxa.sh`` script to format results for input into scoary
 
-- This script labels traits as ``oxa_presence`` - this can be altered in line to give the right gene name
+- This script labels traits as ``oxa_presence`` - this can be altered in line 29 to give the right gene name
 
 - The script ``final.py`` makes sure that the top left corner is empty as Scoary requires  
 
