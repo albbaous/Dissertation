@@ -270,7 +270,9 @@ https://card.mcmaster.ca/download
 
 ### Use this to check no. of hits without needing to move to next step 
 
-``grep -oP '^\S+\t(GCF_[[:alnum:]_]+)' results.txt | cut -f 2 | sort -u | wc -l``
+```
+grep -oP '^\S+\t(GCF_[[:alnum:]_]+)' results.txt | cut -f 2 | sort -u | wc -l
+```
 
 ### Using ``final.py`` to convert ``results.txt`` to ``traits.csv``
 
