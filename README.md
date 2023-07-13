@@ -380,14 +380,12 @@ Result_GCF_024582835_1689259432,1,1
 Result_GCF_024362845_1689259303,1,0 
 Result_GCF_027286365_1689260472,1,1
 Result_GCF_025758125_1689260065,1,0
-
 ```
 
 - Run this to print all the crisprcasfinder directory titles into a txt file (``directory_titles.txt``):
 
 ```
 find -type d -name "Result_GCF*" -printf "%f\n" > directory_titles.txt
-
 ```
 
 ### Run ``match.py``
@@ -413,7 +411,7 @@ find -type d -name "Result_GCF*" -printf "%f\n" > directory_titles.txt
 
 - If the first 9 digits match, it replaces the ``Result_GCF`` name in the ``traits.csv`` with the GCF name
 
-- One of the genomes (Result_GCF_914590485_1689261328) does not match the genomes from Roary so it should be removed
+- One of the genomes (``Result_GCF_914590485_1689261328``) does not match the genomes from Roary so it should be removed
 
 ### Run ``transform.py``
 
