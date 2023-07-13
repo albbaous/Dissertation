@@ -273,6 +273,8 @@ sbatch panaroo3.sh
 
 - Scoary takes ``gene_presence_absence.csv`` from Roary and a ``traits.csv`` made by the user
 
+- `` gene_presence_absence.csv`` not found here as file is too big
+
 ### 1) CARD (did not work out) 
 ### Making a blastable database of genome fasta files using ``blast_db.sh``
 
