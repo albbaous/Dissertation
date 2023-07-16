@@ -327,7 +327,11 @@ grep -oP '^\S+\t(GCF_[[:alnum:]_]+)' results.txt | cut -f 2 | sort -u | wc -l
 
 ### Using ``oxa.py`` to convert ``results.txt`` to ``traits.csv``
 
-- Run this python script using the ``python3 oxa.sh`` script to format results for input into scoary
+- Run this python script to format results for input into scoary:
+
+```
+python3 oxa.sh
+```
 
 - This script labels traits as ``oxa_presence`` - this can be altered in line 29 to give the right gene name
 
