@@ -2,7 +2,11 @@
 A repository containing code for the dissertation titled "" by Alexandra Baousi 
 
 ## Basic Code 
-- Run a batch file:    ``sbatch file.sh`` 
+- Run a batch file on Augusta:    ``sbatch file.sh``
+
+- Run a batch file on Tomoko: ``nohup ./script.sh &``
+
+- Run a python script on Tomoko: ``python3 script.py``
 
 - Read the queue for jobs in SLURM:    ``squeue -u username``
   
@@ -19,6 +23,7 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 - Command to transfer files from remote to local: ``scp username@hpc.address:/path/on/hpc /path/on/local/machine``
 
 - Command to transfer files from local to remote: ``scp /path/to/local/file username@hpc.address:/path/on/hpc``
+  
 
 ## Downloading genomes 
 
