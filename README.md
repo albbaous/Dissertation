@@ -373,7 +373,7 @@ macsydata install -u CASFinder==3.1.0
 
 - Creates ``merged_Final.xls`` which is the wrong format so needs to be converted in Microsoft Excel to ``Excel 97-2004 Workbook (.xls)``
 
-### Run ``traits.py`` 
+### Run ``traits3.py`` 
 
 - This creates the traits file but it doesn't print the first line for some reason so this was added manually.
 
