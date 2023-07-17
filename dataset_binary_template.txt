@@ -1,0 +1,317 @@
+DATASET_BINARY
+#Binary datasets are visualized as filled or empty symbols, depending on the value associated with a node (0 or 1).
+#Each node can have multiple associated values, and each value will be represented by a symbol (defined in FIELD_SHAPES) with corresponding color and label (from FIELD_COLORS and FIELD_LABELS).
+#Possible values (defined under DATA below) for each node are 1 (filled shapes), 0 (empty shapes) and -1 (completely omitted).
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file.
+#SEPARATOR TAB
+#SEPARATOR SPACE
+SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,label1
+
+#dataset color (can be changed later)
+COLOR,#ff0000
+
+#shapes for each field column; possible choices are
+#1: rectangle 
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: check mark
+FIELD_SHAPES,1,1
+
+#field labels
+FIELD_LABELS,CRISPR,Cas
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#define colors for each individual field column (if not defined all symbols will use the main dataset color, defined in COLOR above)
+#FIELD_COLORS,#ff0000
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#Each dataset can have a legend, which is defined using LEGEND_XXX fields below
+#For each row in the legend, there should be one shape, color and label.
+#Optionally, you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning, do NOT define these values
+#Optionally, shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape, you can define a scaling factor between 0 and 1.
+#To order legend entries horizontally instead of vertically, set LEGEND_HORIZONTAL to 1
+#Shape should be a number between 1 and 6, or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#LEGEND_TITLE,Dataset legend
+#LEGEND_POSITION_X,100
+#LEGEND_POSITION_Y,100
+#LEGEND_HORIZONTAL,0
+#LEGEND_SHAPES,1,2,3
+#LEGEND_COLORS,#ff0000,#00ff00,#0000ff
+#LEGEND_LABELS,value1,value2,value3
+#LEGEND_SHAPE_SCALES,1,1,0.5
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL,0
+
+#show dashed lines between leaf labels and the dataset
+#DASHED_LINES,1
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN,0
+#align symbols to the end of each leaf label (individual dataset field will not be aligned to each other)
+#ALIGN_TO_LABELS,1
+
+#symbol height factor; Default symbol height will be slightly less than the available space between leaves, but you can set a multiplication factor here to increase/decrease it (values from 0 to 1 will decrease it, values above 1 will increase it)
+#HEIGHT_FACTOR,1
+
+#increase/decrease the spacing between individual levels, when there is more than one binary level defined 
+#SYMBOL_SPACING,10
+
+#display or hide the text labels above each field column
+#SHOW_LABELS,1
+
+#text label size factor
+#SIZE_FACTOR,1
+
+#text label rotation
+#LABEL_ROTATION,0
+
+#text label shift in pixels (positive or negative)
+#LABEL_SHIFT,0
+
+#An example dataset with 4 columns (circle, left triangle, right triangle and rectangle):
+#FIELD_SHAPES,2,4,5,1
+#FIELD_LABELS,f1,f2,f3,f4
+#FIELD_COLORS,#ff0000,#00ff00,#ffff00,#0000ff
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+#node 9606 will have a filled circle, outline of a left triangle, nothing in the 3rd column and an rectangle outline in column 4
+#9606,1,0,-1,0
+Pseudomonas donghuensis,1,0
+Thalassomonas actiniarum,1,0
+Thalassomonas viridans,1,1
+Kosakonia oryzae,1,0
+Acidiferrobacter thiooxydans,1,1
+Pseudomonas izuensis,1,0
+Edwardsiella ictaluri,0,0
+Pectobacterium aquaticum,1,1
+Enterobacter huaxiensis,1,0
+Shewanella eurypsychrophilus,1,0
+Halomonas binhaiensis,1,0
+Serratia symbiotica,1,1
+Pseudomonas tritici,0,0
+Pseudomonas salmasensis,1,0
+Pseudomonas shahriarae,0,0
+Pseudomonas zeae,1,0
+Pseudomonas iranensis,1,0
+Pseudomonas hamedanensis,1,0
+Pseudomonas zarinae,1,0
+Pseudomonas vanderleydeniana,1,0
+Pseudomonas xantholysinigenes,0,0
+Pectobacterium quasiaquaticum,1,1
+Pseudomonas cannabina,1,0
+Lysobacter solisilvae,1,0
+Entomomonas asaccharolytica,1,1
+Succinivibrio dextrinosolvens,1,0
+Shewanella litorisediminis,1,0
+Dyella caseinilytica,1,0
+Haemophilus parahaemolyticus,1,0
+Escherichia albertii,1,0
+Marinomonas foliarum,1,0
+Flagellatimonas centrodinii,1,1
+Pseudomonas atacamensis,1,0
+Serratia ureilytica,0,0
+Marinobacterium iners,1,0
+Leclercia pneumoniae,1,0
+Glaesserella parasuis,1,0
+Shewanella cyperi,1,0
+Shewanella avicenniae,1,0
+Shewanella sedimentimangrovi,1,1
+Yersinia ruckeri,0,0
+Brenneria izadpanahii,1,1
+Psychrosphaera ytuae,1,0
+Pseudoalteromonas xiamenensis,1,1
+Xanthomonas euvesicatoria,1,0
+Pseudoalteromonas viridis,1,1
+Xenorhabdus budapestensis,0,0
+Halomonas sulfidoxydans,1,1
+Halomonas sulfidivorans,1,0
+Thiothrix unzii,1,1
+Pseudomonas khazarica,1,0
+Psychrosphaera aestuarii,0,0
+Francisella philomiragia,1,1
+Klebsiella pasteurii,1,0
+Acinetobacter bouvetii,0,0
+Acinetobacter junii,1,0
+Pasteurella atlantica,1,0
+Lysobacter caseinilyticus,1,0
+Lysobacter helvus,1,0
+Acinetobacter variabilis,1,0
+Methylomonas paludis,1,1
+Pseudomonas lijiangensis,1,1
+Francisella salimarina,0,0
+Marinobacter adhaerens,0,0
+Citrobacter pasteurii,1,0
+Enterobacter hormaechei,1,0
+Photorhabdus akhurstii,1,1
+Pseudomonas azerbaijanoriens,1,0
+Pseudomonas asgharzadehiana,0,0
+Pseudomonas xanthosomae,1,0
+Pseudomonas fakonensis,0,0
+Pseudomonas alvandae,1,0
+Vibrio ostreae,1,0
+Acinetobacter lwoffii,0,0
+Halomonas piezotolerans,1,1
+Pseudomonas germanica,1,0
+Methylomonas koyamae,1,1
+Methylogaea oryzae,1,1
+Methylomagnum ishizawai,1,1
+Agarivorans albus,1,0
+Vibrio alfacsensis,1,0
+Pseudomonas mandelii,1,0
+Thaumasiovibrio subtropicus,1,1
+Stutzerimonas stutzeri,0,0
+Halomonas profundi,1,1
+Idiomarina abyssalis,1,0
+Erwinia persicina,1,0
+Pantoea dispersa,1,0
+Paraneptunicella aestuarii,1,1
+Shewanella inventionis,1,1
+Vibrio penaeicida,1,1
+Halopseudomonas nanhaiensis,1,0
+Pantoea eucrina,1,0
+Escherichia fergusonii,1,1
+Aeromonas rivuli,1,0
+Hafnia paralvei,0,0
+Pectobacterium colocasium,1,1
+Cobetia amphilecti,0,0
+Arsenophonus apicola,1,1
+Duffyella gerundensis,1,0
+Aeromonas dhakensis,1,0
+Aeromonas media,1,0
+Methylophaga pinxianii,1,0
+Shewanella glacialimarina,1,0
+Klebsiella africana,1,1
+Erwinia rhapontici,1,0
+Marinomonas profundi,1,1
+Stutzerimonas chloritidismutans,1,0
+Pasteurella canis,1,1
+Pseudomonas savastanoi,1,0
+Pectobacterium parvum,1,1
+Plesiomonas shigelloides,1,0
+Microbulbifer celer,1,1
+Pseudomonas wenzhouensis,1,0
+Frateuria soli,1,0
+Frateuria edaphi,1,0
+Microbulbifer elongatus,1,0
+Pseudocitrobacter corydidari,1,0
+Rahnella victoriana,1,0
+Erwinia tracheiphila,0,0
+Pseudomonas sivasensis,1,0
+Stutzerimonas kunmingensis,1,0
+Rhodanobacter denitrificans,1,1
+Thiothrix winogradskyi,1,0
+Thiomicrorhabdus immobilis,0,0
+Edwardsiella piscicida,1,0
+Enterobacter mori,1,0
+Marinobacterium sediminicola,0,0
+Shigella dysenteriae,1,1
+Proteus penneri,1,0
+Vibrio gigantis,0,0
+Moellerella wisconsensis,1,0
+Rahnella aceris,1,0
+Buttiauxella ferragutiae,1,0
+Raoultella planticola,1,0
+Pantoea deleyi,1,0
+beijingensis,1,1
+Moraxella nasovis,1,1
+Pseudomonas tremae,1,0
+Pseudomonas bijieensis,1,0
+Mixta hanseatica,1,0
+Aggregatibacter actinomycetemcomitans,1,1
+Luteibacter sp.,1,0
+Alkalimarinus coralli,1,1
+Vibrio alginolyticus,0,0
+Luteibacter anthropi,1,1
+Acinetobacter tibetensis,1,1
+Legionella lytica,1,1
+Pseudomonas siliginis,1,0
+Pseudomonas pergaminensis,1,0
+Pseudomonas hydrolytica,1,0
+Atlantibacter subterranea,1,1
+Photobacterium sanguinicancri,1,0
+Photobacterium swingsii,1,0
+Vibrio aerogenes,1,1
+Vibrio breoganii,0,0
+Vibrio gallicus,1,1
+Vibrio mangrovi,1,1
+Vibrio neonatus,1,0
+Vibrio palustris,1,1
+Vibrio plantisponsor,1,1
+Vibrio porteresiae,1,0
+Vibrio rarus,1,1
+Vibrio rhizosphaerae,1,1
+Vibrio ruber,1,1
+Aliamphritea ceti,1,0
+Vibrio artabrorum,0,0
+Vibrio chagasii,1,0
+Vibrio cortegadensis,0,0
+Vibrio fortis,1,0
+Vibrio pomeroyi,1,1
+Vibrio tasmaniensis,0,0
+Vibrio toranzoniae,0,1
+Vibrio ishigakensis,1,0
+Methylomonas sp.,1,0
+Thermomonas paludicola,1,1
+Pseudoalteromonas flavipulchra,1,1
+Pseudomonas sichuanensis,1,0
+Shewanella xiamenensis,1,0
+Yersinia alsatica,0,0
+Xanthomonas prunicola,1,0
+Thalassolituus hydrocarbonoclasticus,1,0
+Shewanella putrefaciens,1,1
+Endozoicomonas euniceicola,1,1
+Siccibacter colletis,1,0
+Halomonas qaidamensis,1,0
+Moraxella bovis,1,0
+Vibrio gangliei,1,0
+Alkalimarinus sediminis,1,1
+Kosakonia oryzendophytica,1,0
+Aeromonas salmonicida,1,0
+Pseudoalteromonas rhizosphaerae,1,1
+Pseudoalteromonas ostreae,1,1
+Legionella cardiaca,0,0
+Pseudomonas kermanshahensis,1,0
+Providencia stuartii,1,1
+Pseudomonas nitroreducens,1,0
+Pseudomonas marincola,1,0
+Xanthomonas hydrangeae,1,0
+Xanthomonas arboricola,1,0
+Lysobacter luteus,1,0
+Celerinatantimonas diazotrophica,1,0
+Pseudomonas syringae,1,0
+Photobacterium ganghwense,1,0
+Vibrio japonicus,1,1
+Vibrio pelagius,1,0
+Salinivibrio proteolyticus,1,1
+Kosakonia cowanii,1,0
