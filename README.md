@@ -23,7 +23,15 @@ A repository containing code for the dissertation titled "" by Alexandra Baousi
 - Command to transfer files from remote to local: ``scp username@hpc.address:/path/on/hpc /path/on/local/machine``
 
 - Command to transfer files from local to remote: ``scp /path/to/local/file username@hpc.address:/path/on/hpc``
-  
+
+## Requirements: 
+This is to download the required software: 
+
+1. Anaconda or Miniconda. If not installed on your system, you can download Anaconda [here](https://www.anaconda.com/products/distribution) or Miniconda [here](https://docs.conda.io/en/latest/miniconda.html).
+
+- If running on Tomoko, activate Conda environment and run script
+
+- If running on Augusta, incorporate the Conda activation command in script (as demonstrated in the code on this repository)
 
 ## Downloading genomes 
 
@@ -280,6 +288,32 @@ sbatch panaroo3.sh
 
 - `` gene_presence_absence.csv`` not found here as file is too big
 
+### This step requires a Python environment with Pandas and Numpy installed as many of this scripts use that
+
+This is how to do that: 
+
+- Requirements
+
+1. Python 3.6 or newer. If your operating system does not provide a Python interpreter, you can go to python.org to download an installer.
+
+- In your terminal or command prompt, run:
+
+```
+conda create --name myenv python=3.7
+```
+
+- Activate:
+
+```
+conda activate myenv
+```
+
+- Package installation:
+
+```
+conda install pandas numpy
+```
+
 ### 1) CARD (did not work out) 
 ### Making a blastable database of genome fasta files using ``blast_db.sh``
 - Run the following scripts for this on Tomoko - not many resources required for these
@@ -427,7 +461,7 @@ find -type d -name "Result_GCF*" -printf "%f\n" > directory_titles.txt
 
 - If the first 9 digits match, it replaces the ``Result_GCF`` name in the ``traits.csv`` with the GCF name
 
-- One of the genomes (``Result_GCF_914590485_1689261328``) does not match the genomes from Roary so it should be removed
+- One of the genomes (``Result_GCF_914590485_1689261328``) does not match the genomes from column_15_names.txt so it can be renamed manually to ``GCF_914590485.1_CEDIAZO_illumina_assembly_genomic``
 
 ### Run ``transform.py``
 
