@@ -379,6 +379,12 @@ macsydata install -u CASFinder==3.1.0
 
   !! Top 2 rows have to be edited manually with this script!!
 
+- This is the genome name that needs to be added manually (also remove the ``Name`` label in the top left corner):
+
+```
+Result_GCF_000696345_1689247595
+```
+
 - 6 other genomes from the 208 were also not printed due to a mislabelling error from ``tsv_rename.sh``
 
 - These are the 6 genomes:
