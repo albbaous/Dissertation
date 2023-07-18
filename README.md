@@ -33,6 +33,16 @@ This is to download the required software:
 
 - If running on Augusta, incorporate the Conda activation command in script (as demonstrated in the code on this repository)
 
+2. Mamba (a faster version of Conda). Make sure you are in the base environment. If not, you can activate it:
+```
+conda activate base
+```
+
+Install Mamba from the conda-forge channel:
+```
+conda install -c conda-forge mamba
+```
+
 ## Downloading genomes 
 
 - Download from NCBI (https://www.ncbi.nlm.nih.gov/data-hub/genome/) (accessed May 12, 2023). 
@@ -75,17 +85,7 @@ nohup ./prokka.sh &
 
 ## Running and understanding ``movefna.sh`` (for BUSCO analysis) and ``movegff.sh`` (for Roary) on Tomoko 
 
-- These create new directories which include only the files necessary for BUSCO and Roary analyses. They have similar features: 
-
-- ``mkdir -p`` ensures that the target directory is created only if it doesn't already exist
-
-- find command searches for all files (-type f) in the ``$source_dir`` directory and its subdirectories that have the right extension (-name "*.fna" or "*.gff")
-
-- ``-exec mv`` executes the mv command to move files to the ``$target_dir``
-
-- {} placeholder represents the found file
-
-- plus sign (+) symbol at the end of the command ensures that multiple files can be moved in a single invocation of mv
+- These create new directories which include only the files necessary for BUSCO (fna) and Roary (gff) analyses. 
 
 ## Running BUSCO 
 
@@ -469,6 +469,8 @@ find -type d -name "Result_GCF*" -printf "%f\n" > directory_titles.txt
 
 !! Remove the top left corner value that it adds as that should remain empty !!
 
+- ``traits2.csv`` found here is the traits file used in the final scoary run
+  
 ## Running Scoary 
 
 - Download using:
