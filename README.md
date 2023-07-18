@@ -43,6 +43,11 @@ Install Mamba from the conda-forge channel:
 conda install -c conda-forge mamba
 ```
 
+3. Pip - this is to download required Python packages
+
+Here are instructions on how to do this depending on your operating system/permissions: 
+https://pip.pypa.io/en/stable/installation/
+
 ## Downloading genomes 
 
 - Download from NCBI (https://www.ncbi.nlm.nih.gov/data-hub/genome/) (accessed May 12, 2023). 
