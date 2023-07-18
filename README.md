@@ -486,7 +486,7 @@ Use default parameters:
   
 - ``-t`` Set to ``traits.csv`` 
 
-## Constructing Interactive Tree Of Life (iTOL) Trees
+## Constructing Interactive Tree of Life (iTOL) Trees
 
 Access iTOL here: 
 
@@ -510,12 +510,15 @@ https://itol.embl.de
 
 - This means that [Pantoea] beijingensis had to be manually taken out of its brackets in the ``output.csv``
 
-## Running ``tree_vis.py`` 
+### Running ``tree_vis.py`` 
 - This just visualises the Newick tree on the terminal. Helped during the branch labelling stage
 
 ### Running ``rename_traits.py`` 
 - This renamed the ``traits2.csv`` genomes with their scientific name. This also uses ``output.csv`` and matches genomes in this to those found in the ``traits2.csv``
 
-- This is needed for the dataset
+- This is needed for the ``dataset_binary_template.txt`` from iTOL
+
+## Upload relevant files to iTOL 
+
 
 
