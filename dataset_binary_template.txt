@@ -26,7 +26,7 @@ COLOR,#ff0000
 #4: right pointing triangle
 #5: left pointing triangle
 #6: check mark
-FIELD_SHAPES,1,1
+FIELD_SHAPES,1,2
 
 #field labels
 FIELD_LABELS,CRISPR,Cas
