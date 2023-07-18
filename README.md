@@ -250,6 +250,8 @@ FastTree -nt -gtr core_gene_alignment.aln > my_tree.newick
 python roary_plots.py my_tree.newick gene_presence_absence.csv
 ```
 
+This code creates ``pangenome_matrix.png``, ``pangenome_frequency.png`` , ``pangenome_pie.png``
+
 ## Brief venture into panaroo (``panaroo3.sh``) as alternative (did not work out) 
 
 - Download using:
@@ -378,7 +380,7 @@ python3 oxa.sh
 
 ### 2) Lack of CARD traits significance so moving onto Crisprcasfinder instead 
 
-- Download all crisprcasfinder associated files: 
+- Download all CRISPRCasFinder associated files: 
 
 https://github.com/dcouvin/CRISPRCasFinder
 
@@ -491,6 +493,32 @@ Use default parameters:
 Access iTOL here: 
 
 https://itol.embl.de
+
+#### Create iTOL Conda environment:
+
+- You will need Biopython, pandas, fuzzywuzzy and ete3 for the iTOL related scripts
+
+- To get these create a Conda environment dedicated to iTOL (refer to Requirements for guidance on this):
+
+- Biopython
+```
+mamba install biopython
+````
+
+- Pandas
+```
+mamba install pandas
+```
+
+- Ete3 
+```
+pip install ete3
+```
+
+- Fuzzywuzzy
+```
+pip install fuzzywuzzy
+```
 
 ## Preparing Newick tree for iTOL 
 ### Running ``tree_rename.py`` 
