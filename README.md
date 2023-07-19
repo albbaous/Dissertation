@@ -257,6 +257,22 @@ python roary_plots.py my_tree.newick gene_presence_absence.csv
 
 This code creates ``pangenome_matrix.png``, ``pangenome_frequency.png`` , ``pangenome_pie.png``
 
+- Run this for the Rscript graphs (just ``conserved_vs_total_genes.png``in this case):
+
+```
+Rscript /path/to/create_pan_genome_plots.R *.Rtab
+```
+
+- This requires R and ggplot2 so if you do not have these:
+
+1, Install R: If you don't have R installed, you can download it here https://cran.r-project.org
+
+2. Install ggplot2 library: Once R is installed, you can open an R terminal and install ggplot2 by using the command:
+
+```
+install.packages("ggplot2")
+```
+
 ## Brief venture into panaroo (``panaroo3.sh``) as alternative (did not work out) 
 
 - Download using:
