@@ -553,5 +553,9 @@ pip install fuzzywuzzy
 
 ## Upload relevant files to iTOL 
 
+Refer to iTOL help page for help with this: 
+
+https://itol.embl.de/help.cgi
+
 
 
