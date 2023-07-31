@@ -1,5 +1,5 @@
 # Dissertation Repo
-A repository containing code for the dissertation titled "" by Alexandra Baousi 
+A repository containing code for the MSc Bioinformatics dissertation titled "Unravelling the Dual Nature of CRISPR-Cas Systems in Gamma-Proteobacteria: Antagonist or Accomplice in Pathogenicity?" by Alexandra Baousi 
 
 ## Basic Code 
 - Run a batch file on Augusta:    ``sbatch file.sh``
